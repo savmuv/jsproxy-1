@@ -63,7 +63,7 @@
     btnGo.onclick = function() {
       const text = txtURL.value.trim()
       if (text) {
-        const url = './-go-' + text
+        const url = './go/' + text
         open(url, '_blank', 'noopener,noreferrer')
       }
     }
@@ -126,7 +126,7 @@
         let [id, url] = v
         url = url || `www.${id}.com/`
         return `\
-<a rel="noopener noreferrer" href=./-go-https://${url}>\
+<a rel="noopener noreferrer" href=./go/https://${url}>\
 <img style="display: block;margin-left: auto; margin-right: auto;width: 128px;height: 128px" src=__sys__/assets/ico/${id}.png></a>`
       }).join('')
     }
